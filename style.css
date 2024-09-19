@@ -1,0 +1,164 @@
+body {
+    text-align: center;
+
+    /* background-image: linear-gradient(to right, rgb(223, 97, 97), rgb(88, 60, 6), rgb(69, 69, 4), rgb(43, 156, 43), rgb(69, 69, 4), rgb(88, 60, 6),  rgb(223, 97, 97)) ; */
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(249, 59, 59));
+}
+
+h2 {
+    font-family: fantasy;
+    font-size: 40px;
+    color: rgb(9, 5, 57);
+}
+
+.gradient-text {
+    background-color: #CA4246;
+    margin-top: -220px;
+    font-size: 60px;
+    background-image: linear-gradient(45deg,
+            #ab1e23 16.666%,
+            #85341d 16.666%,
+            #d9694a 33.333%,
+            #0c42a0 33.333%,
+            #d28448 50%,
+            #99bc25 50%,
+            #2d370f 66.666%,
+            #1d2c4c 66.666%,
+            #0c358d 83.333%,
+            #2a1026 83.333%);
+    background-size: 10%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.gradient-text:hover {
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 65%;
+    }
+
+    20% {
+        background-size: 65%;
+    }
+
+    10% {
+        background-size: 10%;
+    }
+}
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 10%;
+    }
+
+    20% {
+        background-size: 65%;
+    }
+
+    10% {
+        background-size: 60%;
+    }
+}
+
+header {
+    margin-top: 1em;
+    margin-top: calc(50vh - 3em);
+}
+
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: normal;
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-bottom: -0.25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 605px;
+}
+
+#inputBox {
+    height: 50px;
+    width: 300px;
+    border: 2px solid rgb(41, 3, 253);
+    border-radius: 20%;
+    color: black;
+    font-family: fantasy;
+    font-size: 20px;
+
+    background-image: linear-gradient(to right, rgb(176, 6, 131), rgb(196, 61, 183));
+}
+
+
+#submitBtn {
+    height: 50px;
+    width: 100px;
+    border-radius: 20%;
+    font-family: fantasy;
+    /* background-color: #7553ba; */
+    background-image: linear-gradient(to right, rgb(124, 164, 237), rgb(111, 219, 111));
+    font-size: 20px;
+}
+
+
+.allDiv {
+    height: 170px;
+    width: 170px;
+    background-color: #CA4246;
+    margin: 10px;
+    border: 7px solid rgb(5, 8, 52);
+    border-radius: 100%;
+    cursor: pointer;
+
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+
+.gameFlash {
+    animation: gameflashAnimation 1s ease;
+}
+
+@keyframes gameflashAnimation {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.userFlash {
+    animation: userflashAnimation 1s ease;
+}
+
+@keyframes userflashAnimation {
+
+    0%,
+    100% {
+        opacity: 1;
+        background-color: initial;
+    }
+
+
+    50% {
+        opacity: 0;
+        background-color: green;
+    }
+}
